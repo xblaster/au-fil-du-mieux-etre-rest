@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router();
 
 /**
@@ -10,7 +11,7 @@ const router = express.Router();
  *       200:
  *         description: Returns a mysterious string.
  */
-router.get('/', function (req, res, next) {
+router.get('/', (req, res) => {
   res.send([1, 2, 3]);
 });
 
