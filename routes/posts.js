@@ -28,4 +28,18 @@ router.get('/', (req, res) => {
   });
 });
 
+router.get('/:id', (req, res) => {
+  const id = req.params.id;
+  requestify.get(`${baseUrl}/wp/v2/posts/${id}`).then((response) => {
+    // Get the response body (JSON parsed - JSON response or jQuery object in case of XML response)
+    const body = response.getBody();
+
+    // const resultBody = mapResult(body);
+    // console.log(resultBody);
+
+
+    res.send(body);
+  });
+});
+
 module.exports = router;

@@ -7,11 +7,11 @@
   },
   "servers": [
     {
-      "url": "https"
+      "url": ""
     }
   ],
   "paths": {
-    "/post/{id}": {
+    "/posts/{id}": {
       "get": {
         "description": "get a single post",
         "parameters":
